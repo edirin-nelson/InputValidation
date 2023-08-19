@@ -11,5 +11,7 @@ public class Main {
         CompletableFuture<ValidationResult> validationFuture = input.validateUserAsync(user);
 
         input.processValidationResult(validationFuture, user);
+
+        JwtManager.processToken(user);
     }
 }

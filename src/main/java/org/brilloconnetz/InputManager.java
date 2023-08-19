@@ -42,7 +42,7 @@ public class InputManager {
         validationFuture.thenAccept(validationResult -> {
             if (validationResult.isValid()) {
                 String jwt = JwtManager.generateToken(user);
-                System.out.println("JWT: " + jwt);
+//                System.out.println("JWT: " + jwt);
             } else {
                 System.out.println("Validation failure(s):");
                 validationResult.getFailures().forEach(System.out::println);
