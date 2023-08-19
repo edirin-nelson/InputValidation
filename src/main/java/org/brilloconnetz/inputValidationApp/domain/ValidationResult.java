@@ -1,4 +1,4 @@
-package org.brilloconnetz.domain;
+package org.brilloconnetz.inputValidationApp.domain;
 
 import lombok.Getter;
 import java.util.ArrayList;

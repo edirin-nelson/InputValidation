@@ -1,9 +1,9 @@
-package org.brilloconnetz;
+package org.brilloconnetz.inputValidationApp;
 
-import org.brilloconnetz.domain.InputManager;
-import org.brilloconnetz.domain.JwtManager;
-import org.brilloconnetz.domain.User;
-import org.brilloconnetz.domain.ValidationResult;
+import org.brilloconnetz.inputValidationApp.domain.InputManager;
+import org.brilloconnetz.inputValidationApp.domain.JwtManager;
+import org.brilloconnetz.inputValidationApp.domain.User;
+import org.brilloconnetz.inputValidationApp.domain.ValidationResult;
 
 import java.util.concurrent.CompletableFuture;
 

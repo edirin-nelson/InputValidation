@@ -1,4 +1,4 @@
-package org.brilloconnetz.domain;
+package org.brilloconnetz.inputValidationApp.domain;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import io.jsonwebtoken.Claims;

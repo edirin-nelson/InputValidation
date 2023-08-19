@@ -66,7 +66,7 @@ The Input-Validation App demonstrates a complete workflow for handling user inpu
 Run the application to input user details and perform validation checks:
 
 ```bash
-mvn exec:java -Dexec.mainClass="org.brilloconnetz.Main"
+mvn exec:java -Dexec.mainClass="org.brilloconnetz.inputValidationApp.Main"
 ```
 
 Follow the prompts to provide username, email, password, and date of birth. The application will guide you through the validation process and provide appropriate messages for each validation step.
