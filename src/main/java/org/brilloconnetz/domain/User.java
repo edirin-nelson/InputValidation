@@ -1,4 +1,4 @@
-package org.brilloconnetz;
+package org.brilloconnetz.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

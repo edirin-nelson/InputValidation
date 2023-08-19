@@ -1,7 +1,7 @@
 package org.brilloconnetz;
 
-import org.brilloconnetz.JwtManager;
-import org.brilloconnetz.User;
+import org.brilloconnetz.domain.JwtManager;
+import org.brilloconnetz.domain.User;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

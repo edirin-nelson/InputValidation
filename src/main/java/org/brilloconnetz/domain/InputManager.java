@@ -1,4 +1,4 @@
-package org.brilloconnetz;
+package org.brilloconnetz.domain;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -39,10 +39,15 @@ public class InputManager {
     }
 
     public void processValidationResult(CompletableFuture<ValidationResult> validationFuture, User user) {
+        // Wait for validation to complete
         validationFuture.thenAccept(validationResult -> {
             if (validationResult.isValid()) {
                 String jwt = JwtManager.generateToken(user);
-//                System.out.println("JWT: " + jwt);
+                System.out.println("JWT: " + jwt);
+
+                // Process the token only if validation passed
+                String verificationResult = JwtManager.processToken(user);
+                System.out.println("Token Verification Result: " + verificationResult);
             } else {
                 System.out.println("Validation failure(s):");
                 validationResult.getFailures().forEach(System.out::println);
