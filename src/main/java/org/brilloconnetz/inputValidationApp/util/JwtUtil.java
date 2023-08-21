@@ -1,14 +1,15 @@
-package org.brilloconnetz.inputValidationApp.domain;
+package org.brilloconnetz.inputValidationApp.util;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
+import org.brilloconnetz.inputValidationApp.domain.User;
 
 import java.security.Key;
 
-public class JwtManager {
+public class JwtUtil {
     static Dotenv dotenv = Dotenv.configure().load();
     private static final String SECRET_KEY = dotenv.get("JWT_SECRET_KEY");
 

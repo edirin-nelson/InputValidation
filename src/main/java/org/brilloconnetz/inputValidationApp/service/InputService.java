@@ -1,4 +1,4 @@
-package org.brilloconnetz.inputValidationApp.domain;
+package org.brilloconnetz.inputValidationApp.service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -6,7 +6,11 @@ import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
 
-public class InputManager {
+import org.brilloconnetz.inputValidationApp.util.JwtUtil;
+import org.brilloconnetz.inputValidationApp.domain.User;
+import org.brilloconnetz.inputValidationApp.domain.ValidationResult;
+
+public class InputService {
     public User getUserDataFromInput() {
         Scanner scanner = new Scanner(System.in);
 
@@ -34,19 +38,19 @@ public class InputManager {
         return new User(username, email, password, dob);
     }
 
-    public CompletableFuture<ValidationResult> validateUserAsync(User user) {
-        return CompletableFuture.supplyAsync(user::validate);
+    public CompletableFuture<ValidationResult> performUserValidationAsync(ValidationService validationService) {
+        return CompletableFuture.supplyAsync(validationService::performDataValidation);
     }
 
     public void processValidationResult(CompletableFuture<ValidationResult> validationFuture, User user) {
         // Wait for validation to complete
         validationFuture.thenAccept(validationResult -> {
             if (validationResult.isValid()) {
-                String jwt = JwtManager.generateToken(user);
+                String jwt = JwtUtil.generateToken(user);
                 System.out.println("JWT: " + jwt);
 
                 // Process the token only if validation passed
-                String verificationResult = JwtManager.processToken(user);
+                String verificationResult = JwtUtil.processToken(user);
                 System.out.println("Token Verification Result: " + verificationResult);
             } else {
                 System.out.println("Validation failure(s):");
