@@ -1,4 +1,4 @@
-package org.brilloconnetz.inputValidationApp.enums;
+package org.brilloconnetz.input_validation_app.enums;
 
 public enum ErrorMessages {
     MIN_USERNAME_LENGTH("Username: Minimum length is 4 characters"),

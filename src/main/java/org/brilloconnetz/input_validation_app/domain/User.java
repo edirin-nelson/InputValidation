@@ -1,4 +1,4 @@
-package org.brilloconnetz.inputValidationApp.domain;
+package org.brilloconnetz.input_validation_app.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

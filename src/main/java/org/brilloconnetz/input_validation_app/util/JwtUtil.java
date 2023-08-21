@@ -1,11 +1,11 @@
-package org.brilloconnetz.inputValidationApp.util;
+package org.brilloconnetz.input_validation_app.util;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import org.brilloconnetz.inputValidationApp.domain.User;
+import org.brilloconnetz.input_validation_app.domain.User;
 
 import java.security.Key;
 

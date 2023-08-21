@@ -1,12 +1,12 @@
-package org.brilloconnetz.inputValidationApp.service;
+package org.brilloconnetz.input_validation_app.service;
 
-import org.brilloconnetz.inputValidationApp.domain.User;
-import org.brilloconnetz.inputValidationApp.domain.ValidationResult;
+import org.brilloconnetz.input_validation_app.domain.User;
+import org.brilloconnetz.input_validation_app.domain.ValidationResult;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeParseException;
 import java.util.regex.Pattern;
-import static org.brilloconnetz.inputValidationApp.enums.ErrorMessages.*;
+import static org.brilloconnetz.input_validation_app.enums.ErrorMessages.*;
 
 public class ValidationService {
     private final User user;

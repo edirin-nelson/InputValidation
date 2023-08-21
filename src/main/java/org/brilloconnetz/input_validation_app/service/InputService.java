@@ -1,4 +1,4 @@
-package org.brilloconnetz.inputValidationApp.service;
+package org.brilloconnetz.input_validation_app.service;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -6,9 +6,9 @@ import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
 
-import org.brilloconnetz.inputValidationApp.util.JwtUtil;
-import org.brilloconnetz.inputValidationApp.domain.User;
-import org.brilloconnetz.inputValidationApp.domain.ValidationResult;
+import org.brilloconnetz.input_validation_app.util.JwtUtil;
+import org.brilloconnetz.input_validation_app.domain.User;
+import org.brilloconnetz.input_validation_app.domain.ValidationResult;
 
 public class InputService {
     public User getUserDataFromInput() {

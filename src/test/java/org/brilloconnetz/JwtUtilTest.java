@@ -1,7 +1,7 @@
 package org.brilloconnetz;
 
-import org.brilloconnetz.inputValidationApp.util.JwtUtil;
-import org.brilloconnetz.inputValidationApp.domain.User;
+import org.brilloconnetz.input_validation_app.util.JwtUtil;
+import org.brilloconnetz.input_validation_app.domain.User;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

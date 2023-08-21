@@ -1,10 +1,10 @@
-package org.brilloconnetz.inputValidationApp;
+package org.brilloconnetz.input_validation_app;
 
-import org.brilloconnetz.inputValidationApp.service.InputService;
-import org.brilloconnetz.inputValidationApp.service.ValidationService;
-import org.brilloconnetz.inputValidationApp.util.JwtUtil;
-import org.brilloconnetz.inputValidationApp.domain.User;
-import org.brilloconnetz.inputValidationApp.domain.ValidationResult;
+import org.brilloconnetz.input_validation_app.service.InputService;
+import org.brilloconnetz.input_validation_app.service.ValidationService;
+import org.brilloconnetz.input_validation_app.util.JwtUtil;
+import org.brilloconnetz.input_validation_app.domain.User;
+import org.brilloconnetz.input_validation_app.domain.ValidationResult;
 
 import java.util.concurrent.CompletableFuture;
 
