@@ -7,8 +7,8 @@ import java.util.Scanner;
 import java.util.concurrent.CompletableFuture;
 
 import org.brilloconnetz.input_validation_app.util.JwtUtil;
-import org.brilloconnetz.input_validation_app.domain.User;
-import org.brilloconnetz.input_validation_app.domain.ValidationResult;
+import org.brilloconnetz.input_validation_app.model.User;
+import org.brilloconnetz.input_validation_app.model.ValidationResult;
 
 public class InputService {
     public User getUserDataFromInput() {

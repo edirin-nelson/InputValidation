@@ -1,4 +1,4 @@
-package org.brilloconnetz.pancake_shop.entity;
+package org.brilloconnetz.pancake_shop.model;
 
 public class User {
     private final String name;

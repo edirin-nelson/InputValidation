@@ -1,4 +1,4 @@
-package org.brilloconnetz.pancake_shop.entity;
+package org.brilloconnetz.pancake_shop.model;
 
 import java.util.ArrayList;
 import java.util.List;

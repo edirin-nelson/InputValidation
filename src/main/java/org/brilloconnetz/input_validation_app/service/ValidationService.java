@@ -1,7 +1,7 @@
 package org.brilloconnetz.input_validation_app.service;
 
-import org.brilloconnetz.input_validation_app.domain.User;
-import org.brilloconnetz.input_validation_app.domain.ValidationResult;
+import org.brilloconnetz.input_validation_app.model.User;
+import org.brilloconnetz.input_validation_app.model.ValidationResult;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeParseException;

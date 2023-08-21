@@ -5,7 +5,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-import org.brilloconnetz.input_validation_app.domain.User;
+import org.brilloconnetz.input_validation_app.model.User;
 
 import java.security.Key;
 
