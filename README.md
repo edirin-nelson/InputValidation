@@ -89,9 +89,92 @@ mvn test
 
 This command will execute the JUnit tests defined in the test classes and display the test results.
 
-## Contributing
 
-Contributions to this project are welcome! If you find any issues or have suggestions for improvements, feel free to submit a pull request or create an issue in the repository.
+
+# Pancake Shop Simulation
+
+This Java application simulates a pancake shop scenario where a shopkeeper makes pancakes and three users consume them within a 30-second time slot. The goal is to determine if the shopkeeper can meet the users' demands and analyze the efficiency of both non-concurrent and concurrent implementations.
+
+## Overview
+
+The application consists of several classes that collaborate to simulate the pancake shop scenario:
+
+- `User`: Represents a user with a name and maximum number of pancakes they can eat.
+- `Slot`: Represents a 30-second time slot with starting and ending times.
+- `PancakeShop`: Represents the pancake shop, capable of making pancakes and generating random user demands.
+- `PancakeShopService`: Provides methods for processing a time slot's scenario, both non-concurrently and concurrently.
+- `ConcurrentPancakeShopRunner`: Executes the concurrent scenario with user demands and shopkeeper activities.
+
+## How to Run
+
+1. Compile the Java files using your preferred Java compiler.
+2. Run the `ConcurrentPancakeShopApp` class for the concurrent scenario.
+3. Run the `NonConcurrentPancakeShopApp` class for the non-concurrent scenario.
+
+## Code Structure
+
+### User
+
+Represents a user who can eat pancakes.
+
+- Attributes:
+    - `name`: The user's name.
+    - `maxPancakesToEat`: The maximum number of pancakes the user can eat.
+
+### Slot
+
+Represents a 30-second time slot.
+
+- Attributes:
+    - `startTime`: The starting time of the time slot.
+    - `endTime`: The ending time of the time slot.
+
+### PancakeShop
+
+Represents the pancake shop.
+
+- Methods:
+    - `makePancakes()`: Generates a random number of pancakes made by the shopkeeper.
+    - `generateRandomUserDemand()`: Generates a random number of pancakes demanded by a user.
+    - `canMeetUserDemands(List<Integer> userDemands)`: Checks if the shopkeeper can meet the demands of all users.
+
+### PancakeShopService
+
+Provides methods for processing the pancake shop scenarios.
+
+- Methods:
+    - `processSlotNonConcurrently(PancakeShop pancakeShop, Slot slot, List<User> users)`: Processes the non-concurrent scenario.
+    - `processSlotConcurrently(int pancakesMade, List<Integer> userDemands)`: Processes the concurrent scenario.
+
+### ConcurrentPancakeShopRunner
+
+Runs the concurrent pancake shop scenario.
+
+- Methods:
+    - `runConcurrentScenario()`: Executes the concurrent scenario.
+
+### NonConcurrentPancakeShopRunner
+
+Runs the non-concurrent pancake shop scenario.
+
+- Methods:
+    - `runNonConcurrentScenario()`: Executes the non-concurrent scenario.
+
+## Observations
+
+Both non-concurrent and concurrent implementations aim to simulate the pancake shop scenario, but they use different approaches to achieve this:
+
+### Non-Concurrent Implementation
+
+The non-concurrent implementation executes sequentially, following a step-by-step approach. The shopkeeper makes pancakes, and then the user demands are processed one by one. This approach is straightforward but might lead to slower execution times when dealing with multiple users and shopkeeper activities.
+
+### Concurrent Implementation
+
+The concurrent implementation leverages the `CompletableFuture` framework to parallelize tasks. This approach allows the shopkeeper to make pancakes and users to generate demands concurrently. Once all demands are ready, the results are combined to process the time slot's scenario. This approach can lead to better performance when dealing with multiple users and shopkeeper activities.
+
+Comparing both implementations, the concurrent version tends to provide better performance and can handle a larger number of users more efficiently. However, it's important to note that the concurrent approach introduces more complexity, and understanding the asynchronous behavior is crucial to avoid potential issues.
+
+In conclusion, the choice between non-concurrent and concurrent implementations depends on the scale of the application, desired performance, and the developer's familiarity with asynchronous programming concepts.
 
 ## License
 
